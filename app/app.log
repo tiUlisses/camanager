@@ -567,3 +567,9 @@
 2024-12-05 17:56:04,370 - __main__ - INFO - Banco de dados inicializado com sucesso.
 2024-12-05 17:56:04,402 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
 2024-12-05 17:56:06,838 - werkzeug - WARNING -  * Debugger is active!
+2024-12-05 19:46:05,256 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 19:46:05,281 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
+2024-12-05 19:46:09,046 - werkzeug - WARNING -  * Debugger is active!
+2024-12-05 20:06:59,219 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:07:00,502 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:07:00,559 - werkzeug - WARNING -  * Debugger is active!

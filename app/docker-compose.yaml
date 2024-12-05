@@ -11,7 +11,7 @@ services:
     volumes:
       - ${CAMERAS_OUTPUT_DIR}:/app/output
       - ${UPLOADS_DIR}:/app/uploads
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ${DOCKER_SOCKET_PATH}:/var/run/docker.sock
       - .:/app
     networks:
       - app-network
@@ -50,7 +50,13 @@ services:
     command: sh -c "mkdir -p /usr/share/nginx/html/streams/output /usr/share/nginx/html/uploads && \
                     ln -sf /mnt/frontend_build/* /usr/share/nginx/html/ && \
                     nginx -g 'daemon off;'"
-
+  ffmpeg:
+    build:
+      context: .
+      dockerfile: Dockerfile.ffmpeg
+    image: ${FFMPEG_IMAGE_NAME}
+    deploy:
+      replicas: 0
 volumes:
   frontend_build:
     driver: local
