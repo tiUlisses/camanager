@@ -567,3 +567,18 @@
 2024-12-05 17:56:04,370 - __main__ - INFO - Banco de dados inicializado com sucesso.
 2024-12-05 17:56:04,402 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
 2024-12-05 17:56:06,838 - werkzeug - WARNING -  * Debugger is active!
+2024-12-05 20:25:28,050 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:25:28,086 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
+2024-12-05 20:25:37,523 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:25:37,627 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
+2024-12-05 20:25:41,766 - werkzeug - WARNING -  * Debugger is active!
+2024-12-05 20:26:15,108 - __main__ - INFO - Câmera MyDocs 2 removida com sucesso.
+2024-12-05 20:26:15,109 - __main__ - INFO - Diretório /home/vagrant/go2rtc/app/output/1 removido com sucesso.
+2024-12-05 20:26:25,830 - __main__ - INFO - Validando conexão RTSP para MyDocs 2...
+2024-12-05 20:26:26,894 - __main__ - INFO - Câmera MyDocs 2 adicionada com sucesso.
+2024-12-05 20:26:26,898 - __main__ - INFO - Iniciando contêiner FFmpeg para câmera 1.
+2024-12-05 20:29:34,610 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:29:34,644 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
+2024-12-05 20:29:39,293 - __main__ - INFO - Banco de dados inicializado com sucesso.
+2024-12-05 20:29:39,323 - __main__ - INFO - Reiniciando contêiner FFmpeg para câmera 1.
+2024-12-05 20:29:42,232 - werkzeug - WARNING -  * Debugger is active!

@@ -55,8 +55,11 @@ services:
       context: .
       dockerfile: Dockerfile.ffmpeg
     image: ${FFMPEG_IMAGE_NAME}
+    volumes:
+      - ${CAMERAS_OUTPUT_DIR}:/output:rw
     deploy:
       replicas: 0
+      
 volumes:
   frontend_build:
     driver: local
