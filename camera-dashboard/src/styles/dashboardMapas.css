@@ -1,0 +1,32 @@
+.dashboard-mapas-container {
+    padding: 20px;
+  }
+  
+  .map-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .map-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .map-item button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .map-item button:hover {
+    background-color: #0056b3;
+  }
+  

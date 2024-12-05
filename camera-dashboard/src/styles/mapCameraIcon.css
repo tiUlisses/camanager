@@ -1,0 +1,23 @@
+.map-camera-icon {
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .in-map {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .in-list {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: grab;
+  }
+  

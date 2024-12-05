@@ -1,0 +1,67 @@
+.cadastrar-mapa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .map-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .camera-list {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .camera-list-item {
+    margin-bottom: 10px;
+  }
+  
+  .map-area {
+    background-color: #eaeaea;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .map-preview {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .map-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Garante que a imagem seja redimensionada sem ser cortada */
+    margin: 0 auto;
+  }
+  

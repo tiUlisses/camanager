@@ -1,0 +1,22 @@
+.visualizar-mapa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .map-preview {
+    position: relative;
+    max-width: 80%; /* Limite de largura para que o mapa não ocupe toda a tela */
+    max-height: 80vh; /* Limite de altura para que o mapa não ultrapasse a altura da janela */
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  

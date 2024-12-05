@@ -1,0 +1,28 @@
+.map-register {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .map-register h2 {
+    text-align: center;
+  }
+  
+  .map-container {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    position: relative;
+    background-size: cover;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

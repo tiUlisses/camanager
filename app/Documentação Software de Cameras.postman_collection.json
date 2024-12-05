@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "95c15199-37d1-44f0-b120-8b8d097afeee",
+		"name": "Documentação Software de Cameras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28464854"
+	},
+	"item": [
+		{
+			"name": "Adicionar uma Nova Câmera (POST /api/cameras)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"MinhaCamera1\",\r\n  \"rtsp_url\": \"rtsp://usuario:senha@192.168.1.100:554/stream\",\r\n  \"agrupamento\": \"Área Externa\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server_url}}:{{port}}/api/cameras",
+					"protocol": "http",
+					"host": [
+						"{{server_url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"cameras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Todas as Câmeras",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar uma Câmera - /api/cameras/<int:camera_id>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"MinhaCamera1Atualizada\",\r\n  \"rtsp_url\": \"rtsp://usuario:senha@192.168.1.100:554/novostream\",\r\n  \"agrupamento\": \"Área Atualizada\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server_url}}:5000/api/cameras/1",
+					"protocol": "http",
+					"host": [
+						"{{server_url}}"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cameras",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar uma Câmera (DELETE /api/cameras/<int:camera_id>)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,59 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .dashboard h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .camera-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .camera-table th,
+  .camera-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .camera-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .camera-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .camera-table button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .camera-table button:hover {
+    color: #0056b3;
+  }
+  

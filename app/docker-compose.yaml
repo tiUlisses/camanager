@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ${CAMERAS_OUTPUT_DIR}:/app/output
+      - ${UPLOADS_DIR}:/app/uploads
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/app
+    networks:
+      - app-network
+    environment:
+      FLASK_ENV: development
+    command: bash -c "trap './stop_ffmpeg_containers.sh' EXIT; python app.py"
+  frontend:
+    build:
+      context: ../camera-dashboard
+      dockerfile: Dockerfile.node
+    image: app-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      REACT_APP_API_URL: http://app:5000/api
+      REACT_APP_STREAM_URL: http://nginx/streams
+    volumes:
+      - ../camera-dashboard:/app
+    networks:
+      - app-network
+    command: npm start
+  nginx:
+    build:
+      context: ../app
+      dockerfile: Dockerfile.nginx
+    image: app-nginx
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    volumes:
+      - ${CAMERAS_OUTPUT_DIR}:/usr/share/nginx/html/streams/output:ro
+      - ${UPLOADS_DIR}:/usr/share/nginx/html/uploads:ro
+      - frontend_build:/mnt/frontend_build:ro
+    command: sh -c "mkdir -p /usr/share/nginx/html/streams/output /usr/share/nginx/html/uploads && \
+                    ln -sf /mnt/frontend_build/* /usr/share/nginx/html/ && \
+                    nginx -g 'daemon off;'"
+
+volumes:
+  frontend_build:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge

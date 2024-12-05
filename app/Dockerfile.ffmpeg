@@ -1,0 +1,12 @@
+# Dockerfile.ffmpeg
+FROM jrottenberg/ffmpeg:4.3-alpine
+
+# Cria um diretório para os arquivos de saída
+RUN mkdir -p /output
+WORKDIR /output
+
+# Garantir que o diretório tenha permissões corretas
+RUN chmod -R 777 /output
+
+# Definir o ponto de entrada para FFmpeg
+ENTRYPOINT ["ffmpeg"]
