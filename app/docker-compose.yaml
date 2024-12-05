@@ -57,6 +57,9 @@ services:
     image: ${FFMPEG_IMAGE_NAME}
     deploy:
       replicas: 0
+    volumes:
+      - ${CAMERAS_OUTPUT_DIR}:/output:rw
+
 volumes:
   frontend_build:
     driver: local
