@@ -1,0 +1,28 @@
+.draggable-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff; /* Azul para padrão */
+    color: white;
+    font-weight: bold;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .draggable-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .draggable-item.camera {
+    background-color: #17a2b8; /* Azul claro para câmeras */
+  }
+  
+  .draggable-item.gateway {
+    background-color: #ffc107; /* Amarelo para gateways */
+  }
+  

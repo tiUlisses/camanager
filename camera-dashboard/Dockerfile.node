@@ -1,9 +1,6 @@
-# Etapa de build do frontend
-FROM node:16 as build
+FROM node:18
 WORKDIR /app
-COPY . .
+COPY package*.json ./
 RUN npm install
-RUN npm run build
-
-# Este Dockerfile é usado para gerar o build do React.
-# Não precisamos de uma etapa de desenvolvimento aqui, porque vamos servir o build estático pelo Nginx.
+COPY . .
+CMD ["npm", "start"]

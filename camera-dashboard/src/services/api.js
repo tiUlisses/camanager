@@ -40,3 +40,23 @@ export const getMapDetails = async (mapId) => {
   
 export const addCamerasToMap = (mapId, data) => api.post(`/maps/${mapId}/cameras`, data);
 export const deleteMap = (mapId) => api.delete(`/maps/${mapId}`);
+
+// Gateways
+export const getGateways = () => api.get('/gateways'); // Lista todos os gateways
+export const addGateway = (data) => api.post('/gateways/register', data); // Adiciona um novo gateway
+export const deleteGateway = (id) => api.delete(`/gateways/delete/${id}`); // Deleta um gateway
+export const getActiveGateways = () => api.get('/gateways/active'); // Lista gateways ativos
+
+// Pessoas
+export const getPeople = () => api.get('/people'); // Lista todas as pessoas
+export const addPerson = (data) => api.post('/people/register', data); // Adiciona uma nova pessoa
+export const updatePerson = (id, data) => api.put(`/people/update/${id}`, data); // Atualiza uma pessoa
+export const deletePerson = (id) => api.delete(`/people/delete/${id}`); // Deleta uma pessoa
+
+export const getPeopleNearGateway = (gatewayId) =>
+  api.get(`/gateways/${gatewayId}/people`);
+
+
+export const getGatewayDetails = async (gatewayId) => {
+  return await axios.get(`${API_BASE_URL}/gateways/${gatewayId}`);
+};

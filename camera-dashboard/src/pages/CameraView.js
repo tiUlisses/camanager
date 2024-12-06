@@ -2,7 +2,7 @@ import React from 'react';
 import VideoPlayer from '../components/VideoPlayer';
 
 function CameraView({ cameraId }) {
-  const videoSrc = `/streams/output/${cameraId}/stream.m3u8`;
+  const videoSrc = `/streams/${cameraId}/stream.m3u8`;
 
 
   return (

@@ -1,6 +1,15 @@
 # Usar a imagem base do nginx
-FROM nginx:latest
+FROM nginx:alpine
+
+# Instalar coreutils para ter acesso aos comandos adicionais como `ln`
+RUN apk add --no-cache coreutils
 
 # Copiar a configuração customizada do nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
+
+# Copiar o script de inicialização para dentro do container
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Tornar o script executável
+RUN chmod +x /usr/local/bin/entrypoint.sh

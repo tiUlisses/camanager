@@ -7,7 +7,7 @@ client = docker.from_env()
 def start_ffmpeg_container(camera_id, camera_name, rtsp_url):
     # Usar um identificador único baseado em UUID para o nome do container
     container_name = f"ffmpeg_{camera_id}"
-    output_dir = f"/home/vagrant/go2rtc/app/output/{camera_id}"  # Diretório no host baseado no ID da câmera
+    output_dir = f"/tmp/output/{camera_id}"  # Diretório no host baseado no ID da câmera
     container_output_dir = f"/output/{camera_id}"  # Diretório no container baseado no ID da câmera
 
     # Certifique-se de que o diretório de saída no host existe
